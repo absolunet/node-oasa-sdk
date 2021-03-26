@@ -1,8 +1,7 @@
 //--------------------------------------------------------
 //-- OASA - Feature tests
 //--------------------------------------------------------
-import * as importedPackage from '../../dist/node';
-import * as gwt             from '../base.gwt';
+import * as gwt from '../base.gwt';
 
 const given = { ...gwt.given };
 const when  = { ...gwt.when };
@@ -20,7 +19,7 @@ given.noImportedPackage = () => {
 
 //-- When
 when.imported = () => {
-	({ oasa } = importedPackage);
+	({ oasa } = jest.requireActual('../..'));
 };
 
 

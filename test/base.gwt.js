@@ -24,7 +24,7 @@ given.noException = () => {
 };
 
 given.importedOASA = () => {
-	return require('../dist/node');  // eslint-disable-line node/global-require
+	return jest.requireActual('..');
 };
 
 given.mockedTerminal = () => {

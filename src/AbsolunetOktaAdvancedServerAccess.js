@@ -107,15 +107,15 @@ class AbsolunetOktaAdvancedServerAccess {
 	 * @throws {Error} If CLI not installed.
 	 */
 	isLogged() {
-		if (this.isCLIInstalled()) {
-			try {
-				return this.runAndParseJSON('list-accounts').length > 0;
-			} catch {
-				return false;
-			}
+		if (!this.isCLIInstalled()) {
+			throw new Error(`${this.binary} CLI is not installed`);
 		}
 
-		throw new Error(`${this.binary} CLI is not installed`);
+		try {
+			return this.runAndParseJSON('list-accounts').length > 0;
+		} catch {
+			return false;
+		}
 	}
 
 
