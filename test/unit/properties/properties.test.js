@@ -25,8 +25,8 @@ describe(`Validate that properties works`, () => {
 		then.propertyValueShouldBe('Okta Advanced Server Access');
 	});
 
-	test(`Ensure loginCommand is valid`, () => {
-		given.property('loginCommand');
+	test(`Ensure enrollCommand is valid`, () => {
+		given.property('enrollCommand');
 		when.propertyFetched();
 		then.propertyValueShouldBe('sft enroll');
 	});

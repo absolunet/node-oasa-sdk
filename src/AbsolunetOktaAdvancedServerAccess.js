@@ -45,11 +45,11 @@ class AbsolunetOktaAdvancedServerAccess {
 
 
 	/**
-	 * Get the login command.
+	 * Get the enroll command.
 	 *
 	 * @type {string}
 	 */
-	get loginCommand() {
+	get enrollCommand() {
 		return `${this.binary} enroll`;
 	}
 
@@ -101,12 +101,12 @@ class AbsolunetOktaAdvancedServerAccess {
 
 
 	/**
-	 * Check if user is logged and enrolled.
+	 * Check if user is enrolled.
 	 *
-	 * @returns {boolean} If logged.
+	 * @returns {boolean} If enrolled.
 	 * @throws {Error} If CLI not installed.
 	 */
-	isLogged() {
+	isEnrolled() {
 		if (!this.isCLIInstalled()) {
 			throw new Error(`${this.binary} CLI is not installed`);
 		}

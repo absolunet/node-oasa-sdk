@@ -1,7 +1,7 @@
 //--------------------------------------------------------
 //-- runAndRead - Unit tests
 //--------------------------------------------------------
-import * as gwt from '../../base.gwt';
+import * as gwt from '../unit.gwt';
 
 const given = { ...gwt.given };
 const when  = { ...gwt.when };
@@ -39,10 +39,6 @@ given.userIsAuthentifiedAndGetsResponse = () => {
 
 given.userIsNotAuthentifiedAndGetsResponse = () => {
 	given.mockedTerminalProcessRunAndReadReturns('Waiting on browser...\nBrowser step completed successfully.\nlorem');
-};
-
-given.commandFails = () => {
-	given.mockedTerminalProcessRunAndReadThrows();
 };
 
 

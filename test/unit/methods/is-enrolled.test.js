@@ -1,9 +1,9 @@
 //--------------------------------------------------------
-//-- isLogged - Unit tests
+//-- isEnrolled - Unit tests
 //--------------------------------------------------------
-import { given, when, then } from './is-logged.gwt';
+import { given, when, then } from './is-enrolled.gwt';
 
-describe(`Validate that isLogged works`, () => {
+describe(`Validate that isEnrolled works`, () => {
 
 	beforeEach(() => {
 		given.noLoginState();

@@ -1,7 +1,7 @@
 //--------------------------------------------------------
 //-- listAccounts - Unit tests
 //--------------------------------------------------------
-import * as gwt from '../../base.gwt';
+import * as gwt from '../unit.gwt';
 
 const given = { ...gwt.given };
 const when  = { ...gwt.when };
@@ -30,14 +30,6 @@ given.hasAccounts = () => {
 
 given.hasNoAccounts = () => {
 	given.mockedTerminalProcessRunAndReadReturns('[]');
-};
-
-given.commandHasEmptyResponse = () => {
-	given.mockedTerminalProcessRunAndReadReturns('');
-};
-
-given.commandFails = () => {
-	given.mockedTerminalProcessRunAndReadThrows();
 };
 
 

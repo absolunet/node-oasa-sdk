@@ -1,7 +1,7 @@
 //--------------------------------------------------------
 //-- runAndParseJSON - Unit tests
 //--------------------------------------------------------
-import * as gwt from '../../base.gwt';
+import * as gwt from '../unit.gwt';
 
 const given = { ...gwt.given };
 const when  = { ...gwt.when };
@@ -39,14 +39,6 @@ given.commandReturnsJSON = () => {
 
 given.commandReturnsNonJSON = () => {
 	given.mockedTerminalProcessRunAndReadReturns('lorem');
-};
-
-given.commandReturnsNothing = () => {
-	given.mockedTerminalProcessRunAndReadReturns('');
-};
-
-given.commandFails = () => {
-	given.mockedTerminalProcessRunAndReadThrows();
 };
 
 

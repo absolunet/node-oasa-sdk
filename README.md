@@ -22,16 +22,16 @@ $ npm install @absolunet/oasa-sdk
 ```js
 import oasa from '@absolunet/oasa-sdk';
 
-const logged = oasa.isLogged();
+const ready = oasa.isEnrolled();
 
-if (logged) {
+if (ready) {
 
-	const results = oasa.listServers();
-
-	results.forEach(({ hostname }) => {
+	oasa.listServers().forEach(({ hostname }) => {
 		console.log(hostname);
 	});
 
+} else {
+	console.log(`Please run: ${oasa.enrollCommand}`);
 }
 
 ```

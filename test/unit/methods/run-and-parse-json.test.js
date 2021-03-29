@@ -58,7 +58,7 @@ describe(`Validate that runAndParseJSON works`, () => {
 
 	test(`Ensure when returns nothing it fails`, () => {
 		given.validAction();
-		given.commandReturnsNothing();
+		given.commandHasEmptyResponse();
 		when.methodCalled();
 		then.shouldHaveThrownMessageContaining('Unexpected token');
 	});
