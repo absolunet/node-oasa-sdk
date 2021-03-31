@@ -14,14 +14,3 @@ docs
 src
 test
 !dist/**
-
-!.github
-!.editorconfig
-!.eslintignore
-!.eslintrc.yaml
-!bitbucket-pipelines.yml
-!CODE_OF_CONDUCT.md
-!CONTRIBUTING.md
-!SECURITY.md
-!SUPPORT.md
-!matrix/**

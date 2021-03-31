@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>@absolunet/oasa-sdk API documentation</title>
+	<title>index.js - @absolunet/oasa-sdk API documentation</title>
 
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta http-equiv="cleartype" content="on">
@@ -54,74 +54,43 @@
 
 		<div id="main">
 		
+			<h1 class="page-title">index.js</h1>
+		
 
 			
 
 
 
     
+    <section>
+        <article>
+            <pre id="line" class="line-numbers"><code class="language-js">//--------------------------------------------------------
+//-- @absolunet/oasa-sdk
+//--------------------------------------------------------
+import AbsolunetOktaAdvancedServerAccess from './AbsolunetOktaAdvancedServerAccess';
 
-
-    <section class="package">
-        <h3> </h3>		
-    </section>
-
-
-
-
-
-
+const oasa = new AbsolunetOktaAdvancedServerAccess();
 
 
 
-    
 
 
 
-    <section class="readme">
-        <article><h1>@absolunet/oasa-sdk</h1>
-<p><a href="https://www.npmjs.com/package/@absolunet/oasa-sdk"><img src="https://img.shields.io/npm/v/@absolunet/oasa-sdk?style=flat-square" alt="npm"></a>
-<a href="https://david-dm.org/absolunet/node-oasa-sdk"><img src="https://img.shields.io/david/absolunet/node-oasa-sdk?style=flat-square" alt="npm dependencies"></a>
-<a href="https://github.com/absolunet/node-oasa-sdk/actions?query=workflow%3Atests+branch%3Amaster"><img src="https://img.shields.io/github/workflow/status/absolunet/node-oasa-sdk/tests/master?label=tests&amp;style=flat-square" alt="Tests"></a>
-<a href="https://npms.io/search?q=%40absolunet%2Foasa-sdk"><img src="https://badges.npms.io/%40absolunet%2Foasa-sdk.svg?style=flat-square" alt="npms"></a>
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a></p>
-<blockquote>
-<p><a href="https://www.okta.com/products/advanced-server-access/">Okta Advanced Server Access</a> (formally ScaleFT) SDK</p>
-</blockquote>
-<p>Maps commands from the <a href="https://help.okta.com/en/prod/Content/Topics/Adv_Server_Access/docs/client.htm">sft</a> client</p>
-<h2>Install</h2>
-<pre class="prettyprint source lang-sh"><code>$ npm install @absolunet/oasa-sdk
+/**
+ * Exports a default instance of the Okta Advanced Server Access SDK.
+ *
+ * @module absolunet/oasa-sdk
+ */
+
+/**
+ * Instance of OktaAdvancedServerAccess.
+ *
+ * @type {AbsolunetOktaAdvancedServerAccess}
+ **/
+export { oasa };
 </code></pre>
-<h2>Usage</h2>
-<pre class="prettyprint source lang-js"><code>import oasa from '@absolunet/oasa-sdk';
-
-const ready = oasa.isEnrolled();
-
-if (ready) {
-
-	oasa.listServers().forEach(({ hostname }) => {
-		console.log(hostname);
-	});
-
-} else {
-	console.log(`Please run: ${oasa.enrollCommand}`);
-}
-
-</code></pre>
-<h2>Documentation</h2>
-<p>See the <a href="https://documentation.absolunet.com/node-oasa-sdk">full documentation</a> for an in-depth look.</p>
-<p>See the <a href="CHANGELOG.md">Changelog</a> to see what has changed.</p>
-<h2>Contribute</h2>
-<p>See the <a href="CONTRIBUTING.md">Contributing Guidelines</a> for ways to get started.</p>
-<p>See the <a href="SUPPORT.md">Support Guide</a> for ways to get help.</p>
-<p>See the <a href="SECURITY.md">Security Policy</a> for sharing vulnerability reports.</p>
-<p>This project has a <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>.
-By interacting with this repository, organization, or community you agree to abide by its terms.</p>
-<h2>License</h2>
-<p><a href="LICENSE">MIT</a> © <a href="https://absolunet.com">Absolunet</a></p></article>
+        </article>
     </section>
-
-
 
 
 
